@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "poke";
+    src:url("pokefont.ttf");
+}
+
+
+*{
+    padding:0;
+    /* margin:0 auto; */
+}
+
+html{
+    background:#1c2833;
+}
+
+.dex{
+    width: 33%;
+    margin:0 auto;
+    padding: 100px; 
+    /* border:1px solid black; */
+    border-radius:25px;
+    background:white;
+}
+
+.title{
+    width:100%;
+    margin-top: 50px;
+    text-align:center;
+    font-family: "poke";
+    color:white;
+    font-size:72px;
+    margin-left: 7px;
+    margin-bottom:5px;
+}
+
+.pokeName{
+    width:100%;
+    margin-bottom: 0;
+    margin-top:-42px;
+    text-align:center;
+}
+
+.pokeType{
+    width:100%;
+    text-align:center;
+    margin-top:0;
+    font-size:16px;
+}
+
+.pokestats{
+    display:flex;
+    width:45%;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content:space-between;
+    border:1px solid black;
+    background:white;
+    /* text-align:right; */
+
+    border-radius: 25px;
+}
+
+.pokeStatNames,.pokeStatVals {
+    list-style:none;
+}
+
+.pokeImg{
+    display:flex;
+    align-items:center;
+}
+
+.pkpic{
+    width:200px;
+    margin:0 auto;
+}
+
+.container{
+    display:flex;
+    justify-content:space-around;
+}
+
+.pokeInfo{
+    width:100%;
+    background: gold;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    border: solid black 1px;
+}
+
+.type{
+    background:#1c2833;
+    border-radius:15px;
+    color:white;
+    width:60px;
+    text-align:center;
+    padding: 5px;
+    margin: 10px;
+}
+
+.typeEff{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    margin:0 auto;
+}
+
+.typing{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.typey{
+    border: 2px solid black;
+    padding:10px;
+    border-radius:25px;
+    margin: 10px;
+}
+
+.tytle{
+    margin:0 auto;
+    text-align:center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pokedex</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="title"> Pokedex</h1>
+
+
+    <div class="dex">
+        <div class="container">
+
+            <div class="pokeInfo">
+                <div class="pokeImg"></div>
+                <h2 class="pokeName"></h2>
+                <h3 class="pokeType">Type: </h3>
+                <div class="pokestats">
+                    <ul class="pokeStatNames"></ul>
+                    <ul class="pokeStatVals"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="typeEff">
+            <div class="typey">
+                <ul class="tytle">Resists: </ul>
+                <ul class="typing resist"></ul>
+            </div>
+            <div class="typey">
+                <ul class="tytle">Immune: </ul>
+                <ul class="typing immune"></ul>
+            </div>
+            <div class="typey">
+                <ul class="tytle">2x Weak: </ul>
+                <ul class="typing weak"></ul>
+            </div>
+            <div class="typey">
+                <ul class="tytle">4x Weak: </ul>
+                <ul class="typing vWeak"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+    <script>
+        const P = new Pokedex.Pokedex();
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
