@@ -101,12 +101,6 @@ async function getData(pok) {
         }
     }
 
-    // console.log(x2d);
-    // console.log(x4d);
-    // console.log(immune);
-    // console.log(res);
-
-
     for (i = 0; i < statname.length; i++) {
         document.querySelector(".pokeStatNames").innerHTML += ("<li>" + statname[i] + ": </li>");
         document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statval[i] + "</li>");
@@ -126,23 +120,11 @@ async function getData(pok) {
 
 }
 
-
-
-
-
 getData("excadrill");
-
-
-// function getInput(p){
-//     // let poke = document.getElementById("pokeInput").value;
-//     // console.log(poke);
-//     getData(p);
-//     // console.log(document.getElementById("pokeInput").value);
-// }
 
 function getInput() { 
     var x =  
         document.getElementById("pokeInput").value; 
-    
+        document.getElementById("pokeInput").value = "";
     getData(x);
 } 
