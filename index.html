@@ -19,6 +19,13 @@
 
 
     <div class="dex">
+
+        <div class="form">
+            <div class = "title subtitle">input pokemon to search</div>
+            <input type="text" id="pokeInput" placeholder="pikachu" onkeypress="handle(event)"/>
+            <button type=button onclick="getInput();" class = "button">Submit</button>
+        </div>
+
         <div class="container">
 
             <div class="pokeInfo">
@@ -57,6 +64,14 @@
         const P = new Pokedex.Pokedex();
     </script>
     <script src="main.js"></script>
+    <script>
+        function handle(e){
+            if(e.keyCode === 13){
+                e.preventDefault();
+                getInput();
+            }
+        }
+    </script>
 </body>
 
 </html>

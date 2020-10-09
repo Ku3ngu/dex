@@ -6,7 +6,16 @@ String.prototype.toProperCase = function () {
 
 
 async function getData(pok) {
-    const response = await P.getPokemonByName(pok);
+
+    document.querySelector(".pokeType").innerHTML = "";    
+    document.querySelector(".pokeStatNames").innerHTML = "";
+    document.querySelector(".pokeStatVals").innerHTML = "";
+    document.querySelector(".weak").innerHTML = "";
+    document.querySelector(".vWeak").innerHTML = "";
+    document.querySelector(".resist").innerHTML = "";
+    document.querySelector(".immune").innerHTML = "";
+
+    const response = await P.getPokemonByName(pok.toLowerCase());
     const {
         name,
         stats
@@ -92,10 +101,10 @@ async function getData(pok) {
         }
     }
 
-    console.log(x2d);
-    console.log(x4d);
-    console.log(immune);
-    console.log(res);
+    // console.log(x2d);
+    // console.log(x4d);
+    // console.log(immune);
+    // console.log(res);
 
 
     for (i = 0; i < statname.length; i++) {
@@ -122,3 +131,18 @@ async function getData(pok) {
 
 
 getData("excadrill");
+
+
+// function getInput(p){
+//     // let poke = document.getElementById("pokeInput").value;
+//     // console.log(poke);
+//     getData(p);
+//     // console.log(document.getElementById("pokeInput").value);
+// }
+
+function getInput() { 
+    var x =  
+        document.getElementById("pokeInput").value; 
+    
+    getData(x);
+} 
