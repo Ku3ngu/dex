@@ -24,7 +24,7 @@ html{
 
 @media (max-width: 920px){
     .dex {
-      width:70%;
+      width:75%;
       padding:4%;
       padding-top:50px;
     }
@@ -60,7 +60,7 @@ html{
 
 .pokestats{
     display:flex;
-    width:45%;
+    width:50%;
     margin: 0 auto;
     padding: 0 20px;
     justify-content:space-between;
