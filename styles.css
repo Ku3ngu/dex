@@ -6,7 +6,7 @@
 
 *{
     padding:0;
-    /* margin:0 auto; */
+    margin:0 auto;
 }
 
 html{
@@ -24,7 +24,12 @@ html{
 
 @media (max-width: 920px){
     .dex {
-      width:65%;
+      width:70%;
+      padding:4%;
+      padding-top:50px;
+    }
+    .title{
+        font-size:11vw;
     }
   }
 
@@ -34,7 +39,7 @@ html{
     text-align:center;
     font-family: "poke";
     color:white;
-    font-size:72px;
+    font-size:7vw;
     margin-left: 7px;
     margin-bottom:5px;
 }
