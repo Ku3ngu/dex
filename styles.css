@@ -14,13 +14,19 @@ html{
 }
 
 .dex{
-    width: 33%;
+    width: 45%;
     margin:0 auto;
     padding: 100px; 
     /* border:1px solid black; */
     border-radius:25px;
     background:white;
 }
+
+@media (max-width: 920px){
+    .dex {
+      width:65%;
+    }
+  }
 
 .title{
     width:100%;
@@ -36,7 +42,7 @@ html{
 .pokeName{
     width:100%;
     margin-bottom: 0;
-    margin-top:-42px;
+    margin-top:-20px;
     text-align:center;
 }
 
@@ -159,6 +165,6 @@ html{
 .subtitle{
     color:black;
     font-size:24px;
-    margin:-30px auto 20px;
+    margin:-30px auto 5px;
     padding: 0;
 }
