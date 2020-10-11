@@ -3,17 +3,6 @@
     src: url("pokefont.ttf");
 }
 
-@media (max-width: 920px) {
-    .dex {
-        width: 75%;
-        padding: 4%;
-        padding-top: 50px;
-    }
-
-    .title {
-        font-size: 11vw;
-    }
-}
 
 * {
     padding: 0;
@@ -41,6 +30,18 @@ html {
     font-size: 7vw;
     margin-left: 7px;
     margin-bottom: 5px;
+}
+
+@media (max-width: 920px) {
+    .dex {
+        width: 75%;
+        padding: 4%;
+        padding-top: 50px;
+    }
+
+    .title {
+        font-size: 11vw;
+    }
 }
 
 .pokeName {
@@ -119,7 +120,7 @@ html {
     border: 2px solid black;
     padding: 10px;
     border-radius: 25px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .tytle {
