@@ -120,7 +120,10 @@ async function getData(pok) {
         if (!immune[0]) {
             immune.push('None');
         }
-
+        if (!x2d[0]) {
+            x2d.push('None');
+        }
+        
         let statTotal = 0;
 
         for (i = 0; i < statname.length; i++) {
