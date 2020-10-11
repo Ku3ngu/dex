@@ -40,7 +40,7 @@ async function getData(pok) {
         let statval = [];
 
         stats.forEach(st => {
-            statname.push(st.stat.name.replace("-", " ").toProperCase());
+            statname.push(st.stat.name.replace("special-", "Sp. ").toProperCase());
             statval.push(st.base_stat);
         });
 
@@ -121,10 +121,17 @@ async function getData(pok) {
             immune.push('None');
         }
 
+        let statTotal = 0;
+
         for (i = 0; i < statname.length; i++) {
             document.querySelector(".pokeStatNames").innerHTML += ("<li>" + (statname[i] == "Hp" ? statname[i].toUpperCase() : statname[i].toProperCase()) + ": </li>");
             document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statval[i] + "</li>");
+            statTotal += statval[i];
         }
+
+        console.log(statTotal);
+        document.querySelector(".pokeStatNames").innerHTML += ("<li>Total: </li>");
+        document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statTotal + "</li>");
 
         createTable(x2d, ".weak");
         createTable(x4d, ".vWeak");
