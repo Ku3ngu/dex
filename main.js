@@ -133,8 +133,15 @@ async function getData(pok) {
 getData("excadrill");
 
 function getInput() { 
-    var x =  
-        document.getElementById("pokeInput").value; 
-        document.getElementById("pokeInput").value = "";
-    getData(x);
+    var x = document.getElementById("pokeInput").value; 
+    var y = document.querySelector(".invalid");
+
+    if (x){
+        getData(x);
+        x = "";
+        y.classList.add("hidden");
+
+    } else{
+        y.classList.remove("hidden");
+    }
 } 

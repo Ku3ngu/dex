@@ -3,6 +3,16 @@
     src:url("pokefont.ttf");
 }
 
+@media (max-width: 920px){
+    .dex {
+      width:75%;
+      padding:4%;
+      padding-top:50px;
+    }
+    .title{
+        font-size:11vw;
+    }
+  }
 
 *{
     padding:0;
@@ -20,17 +30,6 @@ html{
     border-radius:25px;
     background:white;
 }
-
-@media (max-width: 920px){
-    .dex {
-      width:75%;
-      padding:4%;
-      padding-top:50px;
-    }
-    .title{
-        font-size:11vw;
-    }
-  }
 
 .title{
     width:100%;
@@ -101,7 +100,6 @@ html{
     border: solid black 1px;
 }
 
-
 .typeEff{
     display:flex;
     flex-direction: column;
@@ -138,7 +136,7 @@ html{
     border-radius: 10px;
     padding: 5px;
     text-align: center;
-    background: lightgray;
+    background: white;
     box-shadow: 1px 1px 8px black;
     display:block;
     margin:0px auto 10px;
@@ -150,7 +148,7 @@ html{
 .button{
     border: 1px solid grey;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 20px;
     text-align: center;
     background: lightgray;
     box-shadow: 1px 1px 8px black;
@@ -158,7 +156,15 @@ html{
     margin:20px auto 10px;
     font-size:24px;
     outline:none;
-    width:100%;
+}
+
+.button:hover{
+    background: grey;
+}
+
+.button:active{
+    background:black;
+    color:white;
 }
 
 .subtitle{
@@ -202,3 +208,12 @@ html{
 .ice{background: #98D8D8;}
 .dark{background:#705848;}
 .ghost{background:#705898};
+
+.invalid{
+    color:red;
+    display: block;
+}
+
+.hidden{
+    display:none;
+}
