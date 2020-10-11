@@ -52,7 +52,6 @@ async function getData(pok) {
             }
             document.querySelector(".pokeType").innerHTML += (response.types[i].type.name).toProperCase();
             typing.push(response.types[i].type.name);
-
         }
 
         document.getElementById("pokeInfo").className = (typing[0]);
@@ -149,7 +148,6 @@ async function getData(pok) {
         y.classList.remove("hidden");
         document.getElementById("pokeInput").value = "";
     }
-
 
 }
 
