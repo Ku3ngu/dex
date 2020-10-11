@@ -55,6 +55,8 @@ async function getData(pok) {
 
         }
 
+        document.querySelector(".pokeinfo").classList.add(typing[0]);
+
         let x2d = [];
         let x4d = [];
         let res = [];
