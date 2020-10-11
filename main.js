@@ -55,7 +55,7 @@ async function getData(pok) {
 
         }
 
-        document.querySelector(".pokeinfo").classList.add(typing[0]);
+        document.getElementById("pokeInfo").className = (typing[0]);
 
         let x2d = [];
         let x4d = [];
@@ -143,6 +143,7 @@ async function getData(pok) {
         createTable(res, ".resist");
         createTable(immune, ".immune");
         document.getElementById("pokeInput").placeholder = name.toProperCase();
+        document.getElementById("pokeInput").value = "";
     } catch {
         var y = document.querySelector(".invalid");
         y.classList.remove("hidden");

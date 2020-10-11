@@ -95,9 +95,8 @@ html {
     justify-content: space-around;
 }
 
-.pokeInfo {
+#pokeInfo {
     width: 100%;
-    background: gold;
     border-radius: 25px;
     padding-bottom: 20px;
     border: solid black 1px;
