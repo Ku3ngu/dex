@@ -1,25 +1,37 @@
+//jshint esversion: 10
+
 String.prototype.toProperCase = function () {
     return this.replace(/\w\S*/g, function (txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 };
 
+function createTable(list,query){
+    for (i = 0; i < list.length; i++) {
+        document.querySelector(query).innerHTML += ("<li class = \"type " + list[i] + "\">" + list[i].toProperCase() + "</li>");
+    }
+}
 
 async function getData(pok) {
 
-    document.querySelector(".pokeType").innerHTML = "";    
-    document.querySelector(".pokeStatNames").innerHTML = "";
-    document.querySelector(".pokeStatVals").innerHTML = "";
-    document.querySelector(".weak").innerHTML = "";
-    document.querySelector(".vWeak").innerHTML = "";
-    document.querySelector(".resist").innerHTML = "";
-    document.querySelector(".immune").innerHTML = "";
+    try{
 
     const response = await P.getPokemonByName(pok.toLowerCase());
     const {
         name,
         stats
     } = response;
+
+    if (response){
+        document.querySelector(".pokeType").innerHTML = "";    
+        document.querySelector(".pokeStatNames").innerHTML = "";
+        document.querySelector(".pokeStatVals").innerHTML = "";
+        document.querySelector(".weak").innerHTML = "";
+        document.querySelector(".vWeak").innerHTML = "";
+        document.querySelector(".resist").innerHTML = "";
+        document.querySelector(".immune").innerHTML = "";
+
+    }
 
     document.querySelector(".pokeImg").innerHTML = "<img src = \"" + response.sprites.front_default + "\" class = \"pkpic\"/>";
     document.querySelector(".pokeName").innerHTML = (name).toProperCase();
@@ -115,22 +127,21 @@ async function getData(pok) {
         document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statval[i] + "</li>");
     }
 
-    function createTable(list,query){
-        for (i = 0; i < list.length; i++) {
-            document.querySelector(query).innerHTML += ("<li class = \"type " + list[i] + "\">" + list[i].toProperCase() + "</li>");
-        }
-    }
-
-
     createTable(x2d,".weak");
     createTable(x4d, ".vWeak");
     createTable(res, ".resist");
     createTable(immune, ".immune");
+    document.getElementById("pokeInput").placeholder = name.toProperCase();
+} catch{
+    var y = document.querySelector(".invalid");
+    y.classList.remove("hidden");
+    document.getElementById("pokeInput").value = "";
+}
 
 
 }
 
-getData("excadrill");
+getData("pikachu");
 
 function getInput() { 
     var x = document.getElementById("pokeInput").value; 
@@ -138,10 +149,10 @@ function getInput() {
 
     if (x){
         getData(x);
-        x = "";
         y.classList.add("hidden");
 
     } else{
         y.classList.remove("hidden");
     }
+    x = "";
 } 
