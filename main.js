@@ -100,17 +100,27 @@ async function getData(pok) {
             res.splice(res.indexOf(re), 1);
         }
     }
+            if (!x4d[0]){
+                x4d.push("None");
+            }
+            if(!res[0]){
+                res.push('None');
+            }
+            if(!immune[0]){
+                immune.push('None');
+            }
 
     for (i = 0; i < statname.length; i++) {
-        document.querySelector(".pokeStatNames").innerHTML += ("<li>" + statname[i] + ": </li>");
+        document.querySelector(".pokeStatNames").innerHTML += ("<li>" + (statname[i] == "Hp" ? statname[i].toUpperCase() : statname[i].toProperCase()) + ": </li>");
         document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statval[i] + "</li>");
     }
 
     function createTable(list,query){
         for (i = 0; i < list.length; i++) {
-            document.querySelector(query).innerHTML += ("<li class = \"type\">" + list[i].toProperCase() + "</li>");
+            document.querySelector(query).innerHTML += ("<li class = \"type " + list[i] + "\">" + list[i].toProperCase() + "</li>");
         }
     }
+
 
     createTable(x2d,".weak");
     createTable(x4d, ".vWeak");

@@ -17,7 +17,6 @@ html{
     width: 45%;
     margin:0 auto;
     padding: 100px; 
-    /* border:1px solid black; */
     border-radius:25px;
     background:white;
 }
@@ -71,6 +70,8 @@ html{
     background:white;
     margin-top: 10px;
     border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .pokeStatNames,.pokeStatVals {
@@ -100,15 +101,6 @@ html{
     border: solid black 1px;
 }
 
-.type{
-    background:#1c2833;
-    border-radius:15px;
-    color:white;
-    width:60px;
-    text-align:center;
-    padding: 5px;
-    margin: 10px;
-}
 
 .typeEff{
     display:flex;
@@ -175,3 +167,38 @@ html{
     margin:-30px auto 5px;
     padding: 0;
 }
+
+
+.type{
+    background:#1c2833;
+    border-radius:15px;
+    color:white;
+    width:60px;
+    text-align:center;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    list-style:none;
+    /* text-shadow: -1px 1px 0 #000,1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000; */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.normal{background:#A8A878;}
+.rock{background:#B8A038;}
+.flying{background:skyblue;}
+.bug{background:yellowgreen;}
+.steel{background: #B8B8D0;}
+.psychic{background:#F85888;}
+.dragon{background:#7038F8;}
+.fairy{background:pink;}
+.electric{background:#F8D030;}
+.poison{background:#A040A0;}
+.water{background:#6890F0;}
+.fighting{background: #C03028;}
+.ground{background:#E0C068;}
+.fire{background:#F08030;}
+.grass{background:#78C850;}
+.ice{background: #98D8D8;}
+.dark{background:#705848;}
+.ghost{background:#705898};
