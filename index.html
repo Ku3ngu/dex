@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
 
 <head>
@@ -24,10 +19,11 @@
     <div class="dex">
 
         <div class="form">
-            <div class = "title subtitle">Enter Pokemon Name</div>
-            <div class = "invalid hidden" style = "color:red; margin: 10px 0; font-family: 'Roboto', sans-serif;">Please enter a valid pokemon name!</div>
-            <input type="text" id="pokeInput" placeholder="" onkeypress="handle(event)"/>
-            <button type=button onclick="getInput();" class = "button">Search</button>
+            <div class="title subtitle">Enter Pokemon Name</div>
+            <div class="invalid hidden" style="color:red; margin: 10px 0; font-family: 'Roboto', sans-serif;">Please
+                enter a valid pokemon name!</div>
+            <input type="text" id="pokeInput" placeholder="" onkeypress="handle(event)" />
+            <button type=button onclick="getInput();" class="button">Search</button>
         </div>
 
         <div class="container">
@@ -69,8 +65,8 @@
     </script>
     <script src="main.js"></script>
     <script>
-        function handle(e){
-            if(e.keyCode === 13){
+        function handle(e) {
+            if (e.keyCode === 13) {
                 e.preventDefault();
                 getInput();
             }
