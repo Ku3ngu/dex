@@ -298,12 +298,14 @@ html {
     list-style:none;
     margin:10px;
     width:100%;
+    font-family: poke;
 }
 
 .lv,.mv{
-    border-top:1px solid black;
+    border-bottom:1px solid black;
     display:flex;
     justify-content:space-between;
+    padding: 11px 0 7px;
 }
 
 .row{
@@ -313,10 +315,6 @@ html {
 .tbhead{
     font-weight:bold;
     font-size: 20px;
-}
-
-.mvtbhead{
-    border-top:none;
 }
 
 #genSelect{
