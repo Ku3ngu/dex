@@ -145,6 +145,7 @@ html {
     font-size: 24px;
     outline: none;
     width: calc(100% - 10px);
+    font-family: 'Roboto', sans-serif;
 }
 
 .button {
@@ -319,4 +320,6 @@ html {
 
 #genSelect{
     display:flex;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }

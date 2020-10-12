@@ -20,10 +20,6 @@
 
         <div class="form">
             <div class="subtitle">Enter Pokemon Name</div>
-            <div class="invalid hidden" style="color:red; margin: 10px 0; font-family: 'Roboto', sans-serif;">Please
-                enter a valid pokemon name!</div>
-            <input type="text" id="pokeInput" placeholder="" onkeypress="handle(event)" />
-            <button type=button onclick="getInput();" class="button">Search</button>
             <form id="genSelect">
                 <p>Select Gen:</p>
                 <div>
@@ -39,6 +35,10 @@
                     <label for="other">RSE</label>
                 </div>
             </form>
+            <div class="invalid hidden" style="color:red; margin: 10px 0; font-family: 'Roboto', sans-serif;">Please
+                enter a valid pokemon name!</div>
+            <input type="text" id="pokeInput" placeholder="" onkeypress="handle(event)" />
+            <button type=button onclick="getInput();" class="button">Search</button>
         </div>
 
         <div class="container">
