@@ -277,3 +277,48 @@ html {
 .hidden {
     display: none;
 }
+
+.moves{
+    list-style: none;
+    display:flex;
+    width:50%;
+    padding:0 25%;
+    border:2px solid black;
+    border-radius:25px;
+}
+
+@media (max-width: 1000px) {
+    .moves{
+        width:90%;
+        padding:0 5%;
+    }
+}
+
+.move{
+    list-style:none;
+    margin:10px;
+    width:100%;
+}
+
+.lv,.mv{
+    border-top:1px solid black;
+    display:flex;
+    justify-content:space-between;
+}
+
+.row{
+    margin:0;
+}
+
+.tbhead{
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.mvtbhead{
+    border-top:none;
+}
+
+#genSelect{
+    display:flex;
+}

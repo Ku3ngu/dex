@@ -24,6 +24,21 @@
                 enter a valid pokemon name!</div>
             <input type="text" id="pokeInput" placeholder="" onkeypress="handle(event)" />
             <button type=button onclick="getInput();" class="button">Search</button>
+            <form id="genSelect">
+                <p>Select Gen:</p>
+                <div>
+                    <input type="radio" id="rby" name="gen" value="red-blue" checked="checked">
+                    <label for="rby">RBY</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="gsc" name="gen" value="gold-silver">
+                    <label for="female">GSC</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="rse" name="gen" value="ruby-sapphire">
+                    <label for="other">RSE</label>
+                </div>
+            </form>
         </div>
 
         <div class="container">
@@ -57,6 +72,15 @@
                 <ul class="tytle">4x Weak: </ul>
                 <ul class="typing vWeak"></ul>
             </div>
+        </div>
+
+        <div class="moves">
+            <ul class="move">
+                <li class="mv mvtbhead">
+                    <div class="moverow0 row tbhead">Move</div>
+                    <div class="lvlrow0 row tbhead">Level</div>
+                </li>
+            </ul>
         </div>
     </div>
 

@@ -22,6 +22,7 @@ async function getData(pok) {
             stats
         } = response;
 
+        
         if (response) {
             document.querySelector(".pokeType").innerHTML = "";
             document.querySelector(".pokeStatNames").innerHTML = "";
@@ -30,7 +31,44 @@ async function getData(pok) {
             document.querySelector(".vWeak").innerHTML = "";
             document.querySelector(".resist").innerHTML = "";
             document.querySelector(".immune").innerHTML = "";
+            document.querySelector(".move").innerHTML = "<li class=\"mv mvtbhead\"><div class=\"moverow0 row tbhead\">Move</div><div class=\"lvlrow0 row tbhead\">Level</div></li>";
+            
+        }
+        
+        let radio = document.getElementsByName('gen');
+        let moveset = [];
+        let ind = 0;
 
+        for (i = 0; i < radio.length; i++){
+            if (radio[i].checked){
+                let gen = radio[i].value;
+                let moves = response.moves;
+
+                for(k = 0; k < moves.length;k++){
+                    let move = moves[k].move.name;
+                    let version = moves[k].version_group_details;
+                    
+
+                    for(j=0;j<version.length;j++){
+                        if(version[j].version_group.name == gen && version[j].move_learn_method.name == "level-up"){
+                            moveset[ind] = { "lv":version[j].level_learned_at , "move":move };
+                            ind++;
+                        }
+                    }
+                }
+                break;
+            }
+        }
+
+        moveset.sort(function (a,b){
+            return a.lv-b.lv;
+        });
+
+        for(m = 0; m < moveset.length;m++){
+            document.querySelector(".move").innerHTML += (
+                `<li class = "mv"> <div class = "moverow${m+1} row">${moveset[m].move.replace("-"," ").toProperCase()}</div>
+                <div class = "lvlrow${m+1} row">${moveset[m].lv}</div></li>`
+                );
         }
 
         document.querySelector(".pokeImg").innerHTML = "<img src = \"" + response.sprites.front_default + "\" class = \"pkpic\"/>";
@@ -133,7 +171,7 @@ async function getData(pok) {
             statTotal += statval[i];
         }
 
-        console.log(statTotal);
+        // console.log(statTotal);
         document.querySelector(".pokeStatNames").innerHTML += ("<li>Total: </li>");
         document.querySelector(".pokeStatVals").innerHTML += ("<li>" + statTotal + "</li>");
 
